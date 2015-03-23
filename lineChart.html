@@ -22,8 +22,23 @@
 <body>
   <script src="http://d3js.org/d3.v3.min.js" charset="utf-8">
   </script>
+  <script src="lineChart.js"></script>
+
+  <!-- appending chart to separate element, not body -->
+  <div class="chartCanvas"></div>
   
-  <script src="lineChart.js">
+  <script>
+    var customizedChart = lineChart()
+    .width(800)
+    .height(400)
+    
+    d3.csv("dummyData.csv", function(data) {
+    <!-- select canvas -->
+    d3.select(".chartCanvas")
+    <!-- bind data to (single) canvas -->
+    .datum(data)
+    .call(customizedChart)
+    })
   </script>  
 </body>
 </html>
