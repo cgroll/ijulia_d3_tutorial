@@ -1,0 +1,22 @@
+Workflow:
+- create dummy data to experiment with chart
+- write d3 chart as script that is loaded in index.html file
+- transform Javascript script to function:
+  - in index.html file:
+    - select canvas
+    - set customized parameters
+    - load data
+  - in function:
+    - set default parameters, create access functions
+    - remove data loading
+    - create inner function: based on selection and data
+- create Julia API:
+  - save data to disk 
+  - alternatively: directly write data to Javascript code
+  - TODO: print warning that data is written to disk
+  - load data in Javascript
+  - forward chart options to Javascript
+  - call chart
+  - return full Javascript code
+  - TODO: include CSS somehow
+
